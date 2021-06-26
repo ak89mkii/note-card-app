@@ -14,10 +14,10 @@ const newText = document.getElementById("newText");
 
 // Feature 02: Add Note.
 newNoteButton.addEventListener('click', function() {
-    // // Version 01 Function.
-    // addNote(event);
-    // Version 02 Function.
-    addNote2(event, noteArr, gridArr);
+    // Version 01 Function.
+    addNote(event);
+    // // Version 02 Function.
+    // addNote2(event, noteArr, gridArr);
 })
 
 // Feature 03: Delete Note.
@@ -67,7 +67,10 @@ function noteButtons(event) {
         const note = item.parentElement;
         note.remove();
     } else if (item.classList[0] === "modifyButton") {
-        prompt("Please enter a new note in the section below.")
+        let edit = prompt("Please enter a new note in the section below.")
+        if (edit != null) {
+            item.parentElement.innerHTML = edit;
+          }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
         let color = item.style.borderColor;
         color = item.style.borderColor = color === 'white' ? 'black' : 'white';
