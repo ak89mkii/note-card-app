@@ -1,7 +1,6 @@
-// Constants:
-const noteArr = [];
-const gridArr = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'];
+// Version 01:
 
+// Constants:
 
 // Cached Element References:
 
@@ -11,14 +10,13 @@ const newNoteButton = document.getElementById("newNoteButton");
 // Variable assigned to section of HTML (id "NewText") that will be updated by addNote function below.
 const newText = document.getElementById("newText");
 
-// const removeButton = document.getElementById("removeButton");
-// const modifyButton = document.getElementById("modifyButton");
-
 // Event Listeners:
 
 // Feature 02: Add Note.
 newNoteButton.addEventListener('click', function() {
+    // // Version 01 Function.
     // addNote(event);
+    // Version 02 Function.
     addNote2(event, noteArr, gridArr);
 })
 
@@ -89,6 +87,11 @@ function noteButtons(event) {
 // Feature 05: Click 01 (Highlight Note).
 // Feature 06a: Click 02 (Switch Notes).
 // Feature 06b: Click 02 (Deselect Note).
+
+// Version 02:
+
+const noteArr = [];
+const gridArr = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36'];
 
 function addNote2(event, noteArr, gridArr) {
     event.preventDefault();
