@@ -16,5 +16,5 @@
 - Select note card (empty space on either side of buttons) to highlight card. Select another card to have the cards switch positions.
 
 ### Streach Goals:
- Switch removes highlight.
+- Switch removes highlight.
 - a child element bug fix (text area can currently switch with parent element.)
