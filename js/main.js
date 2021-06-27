@@ -134,3 +134,54 @@ function noteButtons(event) {
 //         alert("There are too many characters in the note field (255 maximum).");
 //     }
 // } 
+
+// HTML:
+// Version 01: Grid (6x6)
+// <h2 class="title">- Version 02: Fixed Grid -</h2>
+// <h2 class="title">Note Grid (6X6):</h2>
+// <br>
+// <br>
+// <div class="grid">
+//     <!-- Row 01  -->
+//     <div class="gridNote" id="00"></div>
+//     <div class="gridNote" id="01"></div>
+//     <div class="gridNote" id="02"></div>
+//     <div class="gridNote" id="03"></div>
+//     <div class="gridNote" id="04"></div>
+//     <div class="gridNote" id="05"></div>
+//     <!-- Row 02 -->
+//     <div class="gridNote" id="06"></div>
+//     <div class="gridNote" id="07"></div>
+//     <div class="gridNote" id="08"></div>
+//     <div class="gridNote" id="09"></div>
+//     <div class="gridNote" id="10"></div>
+//     <div class="gridNote" id="11"></div>
+//     <!-- Row 03 -->
+//     <div class="gridNote" id="12"></div>
+//     <div class="gridNote" id="13"></div>
+//     <div class="gridNote" id="14"></div>
+//     <div class="gridNote" id="15"></div>
+//     <div class="gridNote" id="16"></div>
+//     <div class="gridNote" id="17"></div>
+//     <!-- Row 04 -->
+//     <div class="gridNote" id="18"></div>
+//     <div class="gridNote" id="19"></div>
+//     <div class="gridNote" id="20"></div>
+//     <div class="gridNote" id="21"></div>
+//     <div class="gridNote" id="23"></div>
+//     <div class="gridNote" id="24"></div>
+//     <!-- Row 05 -->
+//     <div class="gridNote" id="25"></div>
+//     <div class="gridNote" id="26"></div>
+//     <div class="gridNote" id="27"></div>
+//     <div class="gridNote" id="28"></div>
+//     <div class="gridNote" id="29"></div>
+//     <div class="gridNote" id="30"></div>
+//     <!-- Row 06 -->
+//     <div class="gridNote" id="31"></div>
+//     <div class="gridNote" id="32"></div>
+//     <div class="gridNote" id="33"></div>
+//     <div class="gridNote" id="34"></div>
+//     <div class="gridNote" id="35"></div>
+//     <div class="gridNote" id="36"></div>
+// </div> 
