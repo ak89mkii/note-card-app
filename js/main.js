@@ -60,6 +60,39 @@ function addNote(event) {
     }
 } 
 
+// Feature 04b: Edit Function.
+function editNote(event, edit) {
+    event.preventDefault();
+    // Feature 01: 255 Character Limit.
+    if (newNoteField.value.length < 256) {
+        // Creates new div (class "noteContainer") to contain note.
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("noteContainer");
+        // Creates new p (class "noteItem") with submitted text.
+        const noteText = document.createElement("p");
+        noteText.innerText = edit;
+        noteText.classList.add("noteItem");
+        cardDiv.appendChild(noteText);
+        // Feature 03a: Delete Button.
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "Remove";
+        deleteButton.classList.add("removeButton");
+        cardDiv.appendChild(deleteButton);
+        // Feature 04a: Edit Button.
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        editButton.classList.add("modifyButton");
+        cardDiv.appendChild(editButton);
+        // Appends section of HTML with the id of "newText" with "cardDiv".
+        newText.appendChild(cardDiv);        
+        // Clear the "newNoteField" input value after submitting the form.
+        newNoteField.value = "";
+    // Feature 01: 255 Character Limit.
+    } else {
+        alert("There are too many characters in the note field (255 maximum).");
+    }
+} 
+
 // Feature 03b | 04b | 05: Delete | Edit Function | Click 01 (Highlight Note).
 function noteButtons(event) {
     const item = event.target;
@@ -69,7 +102,9 @@ function noteButtons(event) {
     } else if (item.classList[0] === "modifyButton") {
         let edit = prompt("Please enter a new note in the section below.")
         if (edit != null) {
-            item.innerHTML = edit;
+            const note = item.parentElement;
+            note.remove();
+            item.parentElement = editNote(event, edit);
           }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
         let color = item.style.borderColor;
