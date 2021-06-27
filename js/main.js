@@ -1,6 +1,7 @@
 // Version 01:
 
 // Constants:
+let arrClick = [0];
 
 // Cached Element References:
 
@@ -22,7 +23,7 @@ newNoteButton.addEventListener('click', function() {
 
 // Feature 03: Delete Note.
 newText.addEventListener('click', function() {
-    noteButtons(event);
+    noteButtons(event, arrClick);
 })
 
 // Functions:
@@ -61,7 +62,7 @@ function addNote(event) {
 } 
 
 // Feature 03b | 04b | 05: Delete | Edit Function | Click 01 (Highlight Note).
-function noteButtons(event) {
+function noteButtons(event, arrClick) {
     const item = event.target;
     // Feature 03b: Delete Function.
     if (item.classList[0] === "removeButton") {
@@ -91,9 +92,14 @@ function noteButtons(event) {
             currentNode.parentNode.replaceChild(newNode, currentNode);
           }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
-        let current = item;
-        let previous = item.previousSibling;
-        trade(current, previous);
+        if (arrClick[0] === 0 ) {
+            arrClick.splice(0, 1, item)
+            console.log (arrClick)
+        } else {
+            let current = item;
+            let previous = arrClick[0];
+            trade(current, previous);
+        }
         let color = item.style.borderColor;
         color = item.style.borderColor = color === 'white' ? 'black' : 'white';
     } else {
