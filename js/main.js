@@ -71,8 +71,6 @@ function noteButtons(event) {
     } else if (item.classList[0] === "modifyButton") {
         let edit = prompt("Please enter a new note in the section below.")
         if (edit != null) {
-            // note.remove();
-            // item.parentElement = editNote(event, edit);
             let currentNode = item.parentElement;
             let newNode = document.createElement('div')
             newNode.classList.add("noteContainer");
