@@ -91,11 +91,28 @@ function noteButtons(event) {
             currentNode.parentNode.replaceChild(newNode, currentNode);
           }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
+        let current = item;
+        let previous = item.previousSibling;
+        trade(current, previous);
         let color = item.style.borderColor;
         color = item.style.borderColor = color === 'white' ? 'black' : 'white';
     } else {
     }
 }
+
+function trade(current, previous) {
+    var temp = document.createElement("div");
+    current.parentNode.insertBefore(temp, current);
+
+    // move obj1 to right before obj2
+    previous.parentNode.insertBefore(current, previous);
+
+    // move obj2 to right before where obj1 used to be
+    temp.parentNode.insertBefore(previous, temp);
+
+    // remove temporary marker node
+    temp.parentNode.removeChild(temp);
+}       
 
 // Alternate Code and Notes:
 
