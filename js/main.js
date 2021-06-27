@@ -45,11 +45,11 @@ function addNote(event) {
         deleteButton.innerText = "Remove";
         deleteButton.classList.add("removeButton");
         cardDiv.appendChild(deleteButton);
-         // Feature 04a: Edit Button.
-         const editButton = document.createElement("button");
-         editButton.innerText = "Edit";
-         editButton.classList.add("modifyButton");
-         cardDiv.appendChild(editButton);
+        // Feature 04a: Edit Button.
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        editButton.classList.add("modifyButton");
+        cardDiv.appendChild(editButton);
         // Appends section of HTML with the id of "newText" with "cardDiv".
         newText.appendChild(cardDiv);
         // Clear the "newNoteField" input value after submitting the form.
@@ -69,7 +69,7 @@ function noteButtons(event) {
     } else if (item.classList[0] === "modifyButton") {
         let edit = prompt("Please enter a new note in the section below.")
         if (edit != null) {
-            item.parentElement.innerHTML = edit;
+            item.innerHTML = edit;
           }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
         let color = item.style.borderColor;
