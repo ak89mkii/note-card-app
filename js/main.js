@@ -92,6 +92,7 @@ function noteButtons(event, arrClick) {
             currentNode.parentNode.replaceChild(newNode, currentNode);
           }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
+        // Feature 06a: Click 02 (Switch Notes).
         if (arrClick[0] === 0 ) {
             arrClick.splice(0, 1, item)
             console.log (arrClick)
@@ -100,23 +101,25 @@ function noteButtons(event, arrClick) {
             let previous = arrClick[0];
             trade(current, previous);
         }
+        // Feature 06b: Click 02 (Deselect Note).
         let color = item.style.borderColor;
         color = item.style.borderColor = color === 'white' ? 'black' : 'white';
     } else {
     }
 }
 
+// Feature 06a: Click 02 (Switch Notes).
 function trade(current, previous) {
     var temp = document.createElement("div");
     current.parentNode.insertBefore(temp, current);
 
-    // move obj1 to right before obj2
+    // Move current to right before previous.
     previous.parentNode.insertBefore(current, previous);
 
-    // move obj2 to right before where obj1 used to be
+    // Move previous to right before where current used to be.
     temp.parentNode.insertBefore(previous, temp);
 
-    // remove temporary marker node
+    // Remove temporary marker node.
     temp.parentNode.removeChild(temp);
 }       
 
