@@ -57,7 +57,7 @@ body {
     border-color: black;
     width: 300px;
     height: auto;
-    margin: auto;
+    margin: 5px;
     color: white;
     background-color: black;
 }
@@ -72,7 +72,7 @@ body {
         border-color: black;
         width: 200px;
         height: auto;
-        margin: auto;
+        margin: 5px;
         color: white;
         background-color: black;
     }
