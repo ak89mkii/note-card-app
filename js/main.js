@@ -72,23 +72,26 @@ function noteButtons(event, arrClick) {
     } else if (item.classList[0] === "modifyButton") {
         let edit = prompt("Please enter a new note in the section below.")
         if (edit != null) {
+            // Replaces old node with new edit node.
             let currentNode = item.parentElement;
             let newNode = document.createElement('div')
+            // Container.
             newNode.classList.add("noteContainer");
             const noteText = document.createElement("p");
             noteText.innerText = edit;
             noteText.classList.add("noteItem");
             newNode.appendChild(noteText);
-            // Feature 03a: Delete Button.
+            // Delete Button.
             const deleteButton = document.createElement("button");
             deleteButton.innerText = "Remove";
             deleteButton.classList.add("removeButton");
             newNode.appendChild(deleteButton);
-            // Feature 04a: Edit Button.
+            // Edit Button.
             const editButton = document.createElement("button");
             editButton.innerText = "Edit";
             editButton.classList.add("modifyButton");
             newNode.appendChild(editButton);
+            // Replaces old node with new edit node.
             currentNode.parentNode.replaceChild(newNode, currentNode);
           }
     } else if (item.classList[0] === "noteContainer" || "noteItem") {
