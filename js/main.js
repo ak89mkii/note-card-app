@@ -124,6 +124,7 @@ function trade(current, previous) {
 
     // Remove temporary marker node.
     temp.parentNode.removeChild(temp);
+    arrClick[0] = 0
 }       
 
 // Alternate Code and Notes:
