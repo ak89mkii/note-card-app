@@ -2,7 +2,7 @@
 
 ![Screenshot 01](01.png)
 
-## Deployed App Link: ig-note-117.surge.sh
+## Deployed App Link: https://ig-note-117.surge.sh
 
 ## Trello Board Link: https://trello.com/b/WR7rc9CH/playbook-technical-challenge
 
