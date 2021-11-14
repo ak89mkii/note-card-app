@@ -4,7 +4,6 @@
 let arrClick = [0];
 
 // Cached Element References:
-
 const newNote = document.getElementById("newNote");
 const newNoteField = document.getElementById("newNoteField");
 const newNoteButton = document.getElementById("newNoteButton");
